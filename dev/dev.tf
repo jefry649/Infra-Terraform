@@ -9,6 +9,12 @@ module "kv" {
   location = module.rg.location
 }
 
+module "kv01" {
+  source = "../terraform/key_vault"
+  rg_name = module.rg.rg_name
+  location = module.rg.location
+}
+
 /*
 module "storage" {
   source = "../terraform/storage_account" 
