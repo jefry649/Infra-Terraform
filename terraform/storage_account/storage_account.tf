@@ -10,8 +10,8 @@ resource "azurerm_storage_account" "example" {
   allow_nested_items_to_be_public = true
 
   network_rules {
-    default_action             = "Deny"
-    ip_rules                   = ["38.25.27.50"]
+    default_action = "Deny"
+    ip_rules       = ["38.25.27.50"]
   }
 
   tags = {

@@ -8,7 +8,7 @@ resource "azurerm_windows_virtual_machine" "webServers" {
   network_interface_ids = [
     azurerm_network_interface.nic.id,
   ]
-os_disk {
+  os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
