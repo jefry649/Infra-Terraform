@@ -1,0 +1,36 @@
+name: Infrastructure Deployment Dev
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  deploy:
+    name: Terraform settings
+    runs-on: ubuntu-latest
+
+    env:
+      ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
+
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v3 
+      
+    - name: Terraform init
+      run: terraform init
+      working-directory: ./dev
+
+    - name: Terraform validate
+      run: terraform validate
+      working-directory: ./dev
+
+    - name: Terraform plan
+      run: terraform plan
+      working-directory: ./dev
+
+    #- name: Terraform apply
+    #  run: terraform apply
+    #  working-directory: ./dev
