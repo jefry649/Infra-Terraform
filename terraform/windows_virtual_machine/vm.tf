@@ -5,9 +5,11 @@ resource "azurerm_windows_virtual_machine" "webServers" {
   size                = "Standard_B2s"
   admin_username      = "azure01"
   admin_password      = "123456789xdJ"
+
   network_interface_ids = [
     azurerm_network_interface.nic.id,
   ]
+
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
