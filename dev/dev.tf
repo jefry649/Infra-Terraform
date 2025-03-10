@@ -11,7 +11,7 @@ module "kv" {
 
 module "kv01" {
   source = "../terraform/key_vault"
-  name = "keyvault01"
+  name = "keyvaulJefry1"
   rg_name = module.rg.rg_name
   location = module.rg.location
 }
