@@ -1,7 +1,7 @@
 terraform {
   backend "azurerm" {
     storage_account_name = "storageazure4"
-    container_name       = "webbsite"
+    container_name       = "website"
     key                  = "stateActions.tfstate"
   }
 }
