@@ -24,7 +24,7 @@ module "storage" {
    
 }
 
-module "storage01" {
+module "storage" {
   source = "../terraform/storage_account"
   name = "storageAccountJos"
   rg_name = module.rg.rg_name
