@@ -16,15 +16,19 @@ module "kv01" {
   location = module.rg.location
 }
 
-/*
 module "storage" {
-  source = "../terraform/storage_account" 
+  source = "../terraform/storage_account"
+  name = "storagejefry1"
+  rg_name  = module.rg.rg_name
+  location = module.rg.location
+   
 }
 
 module "storage01"{
   source = "../terraform/storage_account"
 }
 
+/*
 module "Virtual_Machine"{
     source = "../terraform/windows_virtual_machine"
 }
