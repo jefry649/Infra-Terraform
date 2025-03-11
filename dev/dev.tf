@@ -18,14 +18,17 @@ module "kv01" {
 
 module "storage" {
   source = "../terraform/storage_account"
-  name = "storagejefry1"
+  name = "storageaccount01"
   rg_name  = module.rg.rg_name
   location = module.rg.location
    
 }
 
-module "storage01"{
+module "storage01" {
   source = "../terraform/storage_account"
+  name = "storageaccount02"
+  rg_name = module.rg.rg_name
+  location = module.rg.location
 }
 
 /*
