@@ -38,7 +38,7 @@ module "VirtualMachine" {
   location = module.rg.location
 }
 
-module "VirtualMachine" {
+module "VirtualMachine2" {
   source = "../terraform/windows_virtual_machine"
   name = "VMJ2"
   rg_name = module.rg.rg_name
