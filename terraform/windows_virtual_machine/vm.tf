@@ -7,7 +7,7 @@ resource "azurerm_windows_virtual_machine" "webServers" {
   admin_password      = "123456789xdJ"
 
   network_interface_ids = [
-    azurerm_network_interface.nic.id,
+    azurerm_network_interface.example.id
   ]
 
   os_disk {
