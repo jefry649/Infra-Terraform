@@ -33,7 +33,7 @@ module "storage01" {
 
 module "VirtualMachine" {
   source = "../terraform/windows_virtual_machine"
-  name = "VirtualMachineJ1"
+  name = "VMJ1"
   rg_name = module.rg.rg_name
   location = module.rg.location
 }
