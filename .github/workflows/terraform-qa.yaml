@@ -3,6 +3,9 @@ name: Infrastructure Deployment QA
 on:
   pull_request:
     types: [opened, reopened, synchronize]
+    patsh:
+      -'qa/**'
+
 
 permissions:
   contents: read
