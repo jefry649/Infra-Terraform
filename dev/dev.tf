@@ -54,3 +54,9 @@ module "Appservices" {
   location = module.rg.location
 }
 
+module "Appservices2" {
+  source = "../terraform/services"
+  name = "AppSe2"
+  rg_name = module.rg.rg_name
+  location = module.rg.location
+}
