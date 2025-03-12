@@ -20,7 +20,7 @@ resource "azurerm_mssql_server" "example" {
 
 resource "azurerm_mssql_database" "main" {
   name         = "appserviceplan"
-  server_id    = azurerm_mssql_server.example.id
+  server_id    = azurerm_mssql_server.example.example
   collation    = "SQL_Latin1_General_CP1_CI_AS"
   license_type = "LicenseIncluded"
   max_size_gb  = 2
