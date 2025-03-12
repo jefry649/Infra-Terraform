@@ -1,9 +1,9 @@
 terraform {
   backend "azurerm" {
-    resource_group_name = "AzureTerraform"
-    storage_account_name = "storageazure4"
-    container_name       = "website"
-    key                  = "stateActions.tfstate"
+    resource_group_name = "testJefryTerraform"
+    storage_account_name = "azustorej1"
+    container_name       = "terraformaz"
+    key                  = "stateAcqa.tfstate"
   }
 }
 
