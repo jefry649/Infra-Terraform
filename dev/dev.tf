@@ -63,7 +63,7 @@ module "Appservices2" {
 
 module "Sql" {
   source = "../terraform/sql data"
-  name = "SQL1J"
+  name = "Sql1"
   rg_name = module.rg.rg_name
   location = module.rg.location
 }
