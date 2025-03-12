@@ -43,6 +43,6 @@ jobs:
       run: terraform plan
       working-directory: ./qa
 
-     #- name: Terraform apply
-     #  run: terraform apply
-     #  working-directory: ./qa
+    - name: Terraform apply
+      run: terraform apply --auto-approve
+      working-directory: ./qa
