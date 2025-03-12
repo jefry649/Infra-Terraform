@@ -18,7 +18,7 @@ resource "azurerm_mssql_server" "example" {
   }
 }
 
-resource "azurerm_mssql_database" "main" {
+resource "azurerm_mssql_database" "example" {
   name         = "appserviceplan"
   server_id    = azurerm_mssql_server.example.example
   collation    = "SQL_Latin1_General_CP1_CI_AS"
