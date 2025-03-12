@@ -34,5 +34,3 @@ jobs:
      #- name: Terraform apply
      #  run: terraform apply
      #  working-directory: ./qa
-
-      
