@@ -1,9 +1,9 @@
 
 resource "azurerm_storage_account" "example" {
-  name                = "storage01jef"
-  resource_group_name = azurerm_resource_group.main.name
+  name                = var.name
+  resource_group_name = var.rg_name
 
-  location                 = azurerm_resource_group.main.location
+  location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
