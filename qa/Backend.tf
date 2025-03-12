@@ -1,6 +1,6 @@
 terraform {
   backend "azurerm" {
-    resource_group_name = "testJefryTerraform"
+    resource_group_name = "ResouceQa"
     storage_account_name = "azustorej1"
     container_name       = "terraformaz"
     key                  = "stateAcqa.tfstate"
