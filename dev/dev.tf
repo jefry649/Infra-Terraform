@@ -48,7 +48,9 @@ module "VirtualMachine2" {
 */ 
 
 module "Appservices" {
-  source = "../terraform/services "
-  
+  source = "../terraform/services"
+  name = "AppSe1"
+  rg_name = module.rg.rg_name
+  location = module.rg.location
 }
 
