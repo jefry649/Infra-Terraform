@@ -11,7 +11,8 @@ module "kv" {
 } 
 
 module "azurerm_storage_account" {
-  source = "storagej1"
+  source =  "../terraform/storage_account"
+  name = "storagej1" 
   rg_mame = module.rg.rg_mame
   location = module.rg.location 
   account_tier = var.account_tier
