@@ -19,4 +19,11 @@ module "kv" {
   location = module.rg.location
   storage_account_id = module.azurerm_storage_account.id
   } 
+
+  module "appservice" {
+    source = "appsjef"
+    rg_name = module.rg.name
+    location = module.rg.location
+    app_service_plan_id = module.example.id
+}
   
