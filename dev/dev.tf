@@ -1,5 +1,6 @@
 module "rg" {
   source = "../terraform/resource-group"
+  rg_name = "jefrydev"
 }
 
 
