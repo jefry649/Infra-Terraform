@@ -13,8 +13,8 @@ module "kv" {
 module "azurerm_storage_account" {
   source =  "../terraform/storage_account"
   name = "storagej1" 
-  rg_mame = module.rg.rg_mame
+  rg_name = module.rg.rg_name
   location = module.rg.location 
-  account_tier = var.account_tier
-  account_replication_type = var.account_replication_type
-}
+  account_tier = "Standard"
+  account_replication_type = "LRS"
+  } 
