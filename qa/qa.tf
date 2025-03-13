@@ -8,4 +8,4 @@ module "kv" {
   name = "Keyvautlj1"
   rg_name = module.rg.rg_name
   location = module.rg.location
-}
+} 
