@@ -2,6 +2,7 @@ module "rg" {
   source = "../terraform/resource-group"
 }
 
+
 module "kv" {
   source = "../terraform/key_vault"
   name = "Keyvautl00"
