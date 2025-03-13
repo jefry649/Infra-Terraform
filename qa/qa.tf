@@ -11,7 +11,7 @@ module "kv" {
 } 
 
 module "azurerm_storage_account" {
-  source = "storage1j"
+  source = "storagej1"
   rg_mame = module.rg.rg_mame
   location = module.rg.location 
   account_tier = var.account_tier
