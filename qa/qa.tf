@@ -19,3 +19,4 @@ module "kv" {
   location = module.rg.location
   storage_account_id = module.azurerm_storage_account.id
   } 
+  
