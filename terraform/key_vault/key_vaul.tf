@@ -7,9 +7,9 @@ resource "azurerm_key_vault" "example" {
 }
 
 resource "azurerm_monitor_diagnostic_setting" "example" {
-  name               = "example"
+  name               = "Keydsett"
   target_resource_id = azurerm_key_vault.example.id
-  storage_account_id = azurerm_storage_account.example.id
+  storage_account_id = var.storage_account_id 
 
   enabled_log {
     category = "AuditEvent"
