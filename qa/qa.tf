@@ -3,6 +3,7 @@ module "rg" {
   rg_name = "jefryqa"
 }
 
+#Storage Account usado para almacenar los Diagnostic Settings de todo el ambiente
 module "azurerm_storage_account" {
   source =  "../terraform/storage_account"
   name = "storage01jc" 
@@ -20,10 +21,9 @@ module "kv" {
   storage_account_id = module.azurerm_storage_account.id
   } 
 
-  module "appservice" {
-    source = "appsjef"
+  module "azurerm_app_service_plan" {
+    source = "../terraform/services"
+    name = "appsjef"
     rg_name = module.rg.name
-    location = module.rg.location
-    app_service_plan_id = module.example.id
-}
-  
+    location = module.rg.location 
+  }    
