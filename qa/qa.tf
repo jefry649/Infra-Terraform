@@ -24,7 +24,7 @@ module "kv" {
   module "azurerm_app_service_plan" {
     source = "../terraform/services"
     name = "appsjef"
-    rg_name = module.rg.name
+    rg_name = module.rg.rg_name
     location = module.rg.location 
     storage_account_id = var.storage_account_id.id
   }    
