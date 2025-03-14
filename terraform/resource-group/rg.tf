@@ -1,5 +1,5 @@
 
 resource "azurerm_resource_group" "main" {
-  name     = "testJefryTerraform"
+  name     = var.rg_name
   location = "Central US"
 }

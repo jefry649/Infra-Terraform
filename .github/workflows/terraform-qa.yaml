@@ -3,6 +3,14 @@ name: Infrastructure Deployment QA
 on:
   pull_request:
     types: [opened, reopened, synchronize]
+    patsh:
+      -'qa/**'
+
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy: 
@@ -18,6 +26,13 @@ jobs:
     steps:
     - name: Check out the repo
       uses: actions/checkout@v3
+
+    - name: Az Login
+      uses: azure/login@v2
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - uses: hashicorp/setup-terraform@v3
       
     - name: Terraform Init
       run: terraform init
@@ -31,6 +46,6 @@ jobs:
       run: terraform plan
       working-directory: ./qa
 
-     #- name: Terraform apply
-     #  run: terraform apply
-     #  working-directory: ./qa
+    - name: Terraform apply
+      run: terraform apply --auto-approve
+      working-directory: ./qa

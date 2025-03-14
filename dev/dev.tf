@@ -1,6 +1,8 @@
 module "rg" {
   source = "../terraform/resource-group"
+  rg_name = "jefrydev"
 }
+
 
 module "kv" {
   source = "../terraform/key_vault"
@@ -21,7 +23,6 @@ module "storage" {
   name = "storagejefry01"
   rg_name  = module.rg.rg_name
   location = module.rg.location
-   
 }
 
 module "storage01" {
