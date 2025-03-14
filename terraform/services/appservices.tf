@@ -46,3 +46,13 @@ resource "azurerm_monitor_diagnostic_setting" "example" {
   }
 }
 
+  resource "azurerm_monitor_diagnostic_setting" "name" {
+    name = "appservicej"
+    target_resource_id = azurerm_app_service_plan.example.id
+    storage_account_id = var.storage_account_id
+
+    metric {
+      category = "AllMetrics"
+      }
+}
+
