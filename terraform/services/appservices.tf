@@ -35,7 +35,6 @@ resource "azurerm_monitor_diagnostic_setting" "example" {
   name = "appjef1"
   target_resource_id = azurerm_app_service.example.id
   storage_account_id = var.storage_account_id 
-
   enabled_log {
     category = "AuditEvent"
   }
