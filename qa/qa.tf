@@ -26,4 +26,5 @@ module "kv" {
     name = "appsjef"
     rg_name = module.rg.name
     location = module.rg.location 
+    storage_account_id = var.storage_account_id.id
   }    
