@@ -26,5 +26,5 @@ module "kv" {
     name = "appsjef"
     rg_name = module.rg.rg_name
     location = module.rg.location 
-    storage_account_id = var.storage_account_id.id
+    storage_account_id = module.azurerm_storage_account.id
   }    
